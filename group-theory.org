@@ -15,6 +15,7 @@
 #+startup: beamer
 #+LaTeX_CLASS: beamer
 #+latex_header: \mode<beamer>{\usetheme{moloch}}
+#+LATEX_HEADER: \molochset{block=fill}
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
 #+LATEX_HEADER:   backgroundcolor=\color{backcolour},
@@ -42,14 +43,11 @@
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 * Introduction
-These are notes for WVWC's 2026 Summer Gifted program and are based off of the
-textbook [cite:@carterVisualGroupTheory2009].
-
 ** Rubik's cube                                                  :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
-Consider the Rubik's Cube (for an online example, see [[https://onlinecube.com/][here]]).  What moves can we
+Consider the Rubik's cube (for an online example, see [[https://onlinecube.com/][here]]).  What moves can we
 perform on a Rubik's cube?
 
 ** Rules of moves                                                  :B_block:
@@ -64,15 +62,20 @@ movement of the cube.  These movements have the following properties:
 3. Every move is deterministic.
 4. Moves can be combined.
 
-** Generators of Rubik's cube                                    :B_example:
+** Generators of Rubik's cube motions                       :B_exampleblock:
 :PROPERTIES:
-:BEAMER_env: example
+:BEAMER_env: exampleblock
 :END:
 The website above uses twelve basic moves: \( \mathsf{F} \), \( \mathsf{F}' \),
- \( \mathsf{U} \), \( \mathsf{U}' \), and so on.  How can you write \(
- \mathsf{F}' \) in terms of \( \mathsf{F} \)?  What is the smallest number of
- moves you can find that represent all of the basic moves on a Rubik's cube?
+ \( \mathsf{U} \), \( \mathsf{U}' \), and so on.
+ - How can you write \(\mathsf{F}' \) in terms of \( \mathsf{F} \)?
+ - What is the smallest number of moves you can find that represent all of the
+   basic moves on a Rubik's cube?
 
+** Groups                                                          :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
 The observations above form the basis of a mathematical structure called a
 *group*.  Groups appear throughout mathematics and its applications.
 
