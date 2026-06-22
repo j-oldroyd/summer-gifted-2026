@@ -1,0 +1,35 @@
+#+TITLE: Group Theory Notes
+#+AUTHOR: Jesse Ernest Oldroyd
+#+EMAIL: oldroyd.j@wvwc.edu
+
+These are notes for WVWC's 2026 Summer Gifted program.  In these notes, we will
+look at exploring groups using Python.
+
+* <2026-06-22 Mon>
+We will use Python in this course to perform mathematical computations.  For the
+first part of the computer science course, we will look at how to use Python to
+work with groups.
+
+Suppose we want to model the group from Exercise 1.1 of the previous class.
+Then we will need to specify the /objects/ and the /actions/ of the group.  We
+can use lists to hold the objects and functions to represent the actions.
+
+#+begin_src python :exports both
+  # group from 1.1 has as objects arrangements of a penny and a dime
+  arrangement1 = ['penny', 'dime']
+  arrangement2 = ['dime', 'penny']
+
+  # our action takes arrangement1 and turns it into arrangement2, and
+  # vice-versa
+  def group_action(arrangement):
+      if arrangement[0] == 'penny':
+          return ['dime', 'penny']
+      else:
+          return ['penny', 'dime']
+#+end_src
+
+**Example**: Find the result of performing the group action twice in a row using
+ the code above.
+
+ /Answer/: We can find the answer by computing src_python[:exports
+ code]{group_action(group_action(arrangement))} for the various arrangements.
