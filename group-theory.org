@@ -1,0 +1,65 @@
+#+TITLE: Group Theory Notes
+#+AUTHOR: Jesse Ernest Oldroyd
+#+EMAIL: oldroyd.j@wvwc.edu
+
+These are notes for WVWC's 2026 Summer Gifted program and are based off of the
+textbook [cite:@carterVisualGroupTheory2009].
+
+* <2026-06-21 Sun>
+Consider the Rubik's Cube (for an online example, see [[https://onlinecube.com/][here]]).
+
+**Example**: What moves can we perform on a Rubik's cube?
+
+There are many, /many/ different configurations (or states) possible, but only
+one solution.  We can get from one state to another by performing a valid
+movement of the cube.  These movements have the following properties:
+1. There is an unchanging list of allowable moves.
+2. Every move is reversible.
+3. Every move is deterministic.
+4. Moves can be combined.
+
+**Example**: The website above uses twelve basic moves: \( F \), \( F' \), \( U
+ \), \( U' \), and so on.  How can you write \( F' \) in terms of \( F \)?  What
+ is the smallest number of moves you can find that represent all of the basic
+ moves on a Rubik's cube?
+
+The observations above form the basis of a mathematical structure called a
+*group*.  Groups appear throughout mathematics and its applications.
+
+**Exercise 1.1**: Consider placing a penny and a nickel side by side in front of
+ you.  Is the action of swapping the positions of both coins a group?  Note that
+ you will need to specify an appropriate list of moves and determine if that
+ list satisfies the above rules.
+
+**Exercise 1.3**: Suppose you have five marbles in each of two piles in front of
+ you.  You have two actions available to you: you can take a marble from the
+ left pile and move it to the right pile, /or/ you can take a marble from the
+ right pile and add it to the left pile.  Is this a group?
+
+**Exercise 1.4**: Consider all possible three-letter "words" that can be formed from the
+ letters \( \{A, B, C\} \), where each letter must be used precisely once.
+ a) How many words are possible?
+ b) Consider two actions: swapping the first and second letter of a word, and
+    swapping the second and third letter of a word.  Can these two actions alone
+    generate all of the words possible starting from \( ABC \)?
+ c) Is this a group?
+
+At this point, you might start thinking of a group as a set of objects that we
+can move around in a nice way.  Group theory is about the study of such sets
+following the rules outlined above.
+
+**Exercise 1.7**: Consider the group from Exercise 1.1.
+a) By rule 4, the action from this exercise when performed twice in a row yields
+   another action in the group.  What is this action?
+b) Does every group have an action like this?
+
+**Exercise 1.8**: Try to find or construct groups that satisfy the following
+constraints:
+a) The order in which the actions are performed matters.
+b) The order in which the actions are performed doesn't matter.
+c) There are exactly three actions.
+d) There are exactly four actions.
+e) There are infinitely many actions.
+
+**Exercise 1.10**: Devise a situation that satisfies all of the group rules
+ except for the second, third or fourth depending on your group (ha!).
