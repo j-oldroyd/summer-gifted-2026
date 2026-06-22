@@ -1,5 +1,5 @@
 #+TITLE: Group Theory Notes
-#+AUTHOR: Jesse Oldroyd #+
+#+AUTHOR: Jesse Oldroyd
 #+EMAIL: oldroyd.j@wvwc.edu
 #+DESCRIPTION: Group theory notes for WVWC 2026 summer gifted notes, based on Visual Group Theory.
 #+KEYWORDS: group theory
@@ -42,14 +42,15 @@
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 * Introduction
-** Rubik's cube                                                  :B_example:
+** Rubik's Cube
+*** Rubik's cube                                                :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
 Consider the Rubik's cube (for an online example, see [[https://onlinecube.com/][here]]).  What moves can we
 perform on a Rubik's cube?
 
-** Rules of moves                                                  :B_block:
+*** Rules of moves                                                :B_block:
 :PROPERTIES:
 :BEAMER_env: block
 :END:
@@ -61,9 +62,11 @@ movement of the cube.  These movements have the following properties:
 3. Every move is deterministic.
 4. Moves can be combined.
 
-** Generators of Rubik's cube motions                       :B_exampleblock:
+** Rubik's Cube
+
+*** Generators of Rubik's cube motions                          :B_example:
 :PROPERTIES:
-:BEAMER_env: exampleblock
+:BEAMER_env: example
 :END:
 The website above uses twelve basic moves: \( \mathsf{F} \), \( \mathsf{F}' \),
  \( \mathsf{U} \), \( \mathsf{U}' \), and so on.
@@ -78,8 +81,9 @@ The website above uses twelve basic moves: \( \mathsf{F} \), \( \mathsf{F}' \),
 The observations above form the basis of a mathematical structure called a
 *group*.  Groups appear throughout mathematics and its applications.
 
-* Examples of groups
-** Coins in a line                                               :B_example:
+* Examples of Groups
+** Swaps
+*** Coins in a line                                             :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
@@ -88,7 +92,7 @@ action of swapping the positions of both coins a group?  Note that you will
 need to specify an appropriate list of moves and determine if that list
 satisfies the above rules.
 
-** Marbles in piles                                              :B_example:
+*** Marbles in piles                                            :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
@@ -96,8 +100,8 @@ Suppose you have five marbles in each of two piles in front of you.  You have
 two actions available to you: you can take a marble from the left pile and move
 it to the right pile, /or/ you can take a marble from the right pile and add it
 to the left pile.  Is this a group?
-
-** Three letter words                                            :B_example:
+** Actions on Words
+*** Three letter words                                          :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
@@ -109,7 +113,7 @@ Consider all possible three letter "words" that can be formed from the letters
     generate all of the words possible starting from \( ABC \)?
  c) Is this a group?
 
-** Group theory                                                    :B_frame:
+** Group Theory                                                    :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
@@ -117,7 +121,7 @@ At this point, you might start thinking of a group as a set of objects that we
 can move around in a nice way.  Group theory is about the study of such sets
 following the rules outlined above.
 
-** Coins in a line (again)                                       :B_example:
+*** Coins in a line (again)                                     :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
@@ -125,8 +129,15 @@ Consider the group of coins in a line.
 a) By rule 4, the action from this exercise when performed twice in a row yields
    another action in the group.  What is this action?
 b) Does every group have an action like this?
-
-** Examples of groups                                            :B_example:
+** Examples of Groups
+*** Symmetry groups                                             :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Describe the symmetry group of an equilateral triangle and a non-square
+rectangle.
+** Groups with Certain Properties
+*** Groups with restrictions                                    :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
@@ -137,7 +148,8 @@ c) There are exactly three actions.
 d) There are exactly four actions.
 e) There are infinitely many actions.
 
-** Nonexamples of groups                                         :B_example:
+** Nonexamples of groups
+*** Sets that break group rules                                 :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
@@ -158,22 +170,24 @@ The *cubies* on a Rubik's cube can be placed in the following categories:
 :BEAMER_env: frame
 :END:
 - A *cubicle* is the position of a given cubie.  Moves changes the positions of
-the cubies, but /not/ the cubicles.
+  the cubies, but /not/ the cubicles.
 - Positions can be specified by listing incident faces: \( \mathsf{u} \mathsf{f}
   \mathsf{r}\) represents the cubicle/cubie on the upper front right face (i.e.,
   a corner).
-** Edge Positions                                                :B_example:
+*** Edge Positions                                              :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
 Give all positions for edge cubies on the back face of a cube.
-** Group actions and cubies                                      :B_example:
+** Group actions and cubies
+*** Generators Acting on Cubies                                 :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
 What happens to cubies in the previous categories if you apply any of the six
 basic Rubik's cube actions?
-** Size of the Rubik's cube group                                :B_example:
+** Estimating Rubik's Cube Group
+*** Size of the Rubik's cube group                              :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
