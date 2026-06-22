@@ -31,5 +31,5 @@ can use lists to hold the objects and functions to represent the actions.
 **Example**: Find the result of performing the group action twice in a row using
  the code above.
 
- /Answer/: We can find the answer by computing src_python[:exports
- code]{group_action(group_action(arrangement))} for the various arrangements.
+ /Answer/: We can find the answer by computing
+ ~group_action(group_action(arrangement))~ for the various arrangements.
