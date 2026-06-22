@@ -1,9 +1,8 @@
 #+TITLE: CS Notes (Groups)
 #+AUTHOR: Jesse Oldroyd
-#+DATE: <2026-06-22 Mon>
 #+EMAIL: oldroyd.j@wvwc.edu
-#+DESCRIPTION:
-#+KEYWORDS:
+#+DESCRIPTION: CS notes for 2026 Summer Gifted class.
+#+KEYWORDS: group theory, Rubik's cube
 #+LANGUAGE:  en
 #+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
@@ -61,9 +60,9 @@ The fundamental objects we need from Python are:
 - *lists*: ~[obj1, obj2, ...]~
 - *functions*: ~def func(x): ...~
 * Creating Groups in Python
-** A simple group in Python                                        :B_frame:
+** A simple group in Python                                   :B_alertblock:
 :PROPERTIES:
-:BEAMER_env: frame
+:BEAMER_env: alertblock
 :END:
 Suppose we want to model the coins group of the previous class.  Then we will
 need to specify the /objects/ and the /actions/ of the group.  We can use lists
