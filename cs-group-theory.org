@@ -1,4 +1,4 @@
-#+TITLE: Group Theory Notes
+#+TITLE: CS Notes (Groups)
 #+AUTHOR: Jesse Oldroyd
 #+DATE: <2026-06-22 Mon>
 #+EMAIL: oldroyd.j@wvwc.edu
@@ -50,17 +50,24 @@
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
-We will use @Python@ in this course to perform mathematical computations.  For the
+We will use *Python* in this course to perform mathematical computations.  For the
 first part of the computer science course, we will look at how to use Python to
-work with groups.
-
+work with groups.  We will primarily interact with Python using the *Spyder* IDE.
+** Python fundamentals                                             :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+The fundamental objects we need from Python are:
+- *lists*: ~[obj1, obj2, ...]~
+- *functions*: ~def func(x): ...~
+* Creating Groups in Python
 ** A simple group in Python                                        :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
-Suppose we want to model the group from Exercise 1.1 of the previous class.
-Then we will need to specify the /objects/ and the /actions/ of the group.  We
-can use lists to hold the objects...
+Suppose we want to model the coins group of the previous class.  Then we will
+need to specify the /objects/ and the /actions/ of the group.  We can use lists
+to hold the objects...
 
 #+begin_src python :exports code :session
   # group from 1.1 has as objects arrangements of a penny and a dime
@@ -100,10 +107,11 @@ Find the result of performing the group action twice in a row using the code
 above.
 
 /Answer/: We can find the answer by computing
-~group_action(group_action(arrangement))~ for the various arrangements.
+~group_action(group_action(arrangement))~ for the various arrangements...
 
 ** Words group again                                             :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
-Implement the "three letter words" group in Python.
+Implement the "three letter words" group in Python.  Be careful to specify the
+objects and the actions!
