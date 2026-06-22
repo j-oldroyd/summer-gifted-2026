@@ -85,3 +85,9 @@ above.
 
 /Answer/: We can find the answer by computing
 ~group_action(group_action(arrangement))~ for the various arrangements.
+
+** Words group again                                             :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Implement the "three letter words" group in Python.
