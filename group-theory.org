@@ -73,6 +73,7 @@ The website above uses twelve basic moves: \( F \), \( F' \), \( U \), \( U' \),
 The observations above form the basis of a mathematical structure called a
 *group*.  Groups appear throughout mathematics and its applications.
 
+* Examples of groups
 ** Coins in a line                                               :B_example:
 :PROPERTIES:
 :BEAMER_env: example
@@ -137,3 +138,9 @@ e) There are infinitely many actions.
 :END:
 Devise a situation that satisfies all of the group rules except for the second,
 third or fourth depending on your group.
+
+** Rubik's cube group                                            :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+What should the Rubik's cube group look like?
