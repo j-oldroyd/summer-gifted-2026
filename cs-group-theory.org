@@ -15,6 +15,34 @@
 #+startup: beamer
 #+LaTeX_CLASS: beamer
 #+latex_header: \mode<beamer>{\usetheme{moloch}}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \definecolor{codegreen}{rgb}{0,0.6,0}
+#+LATEX_HEADER: \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+#+LATEX_HEADER: \definecolor{codepurple}{rgb}{0.58,0,0.82}
+#+LATEX_HEADER: \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+#+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
+#+LATEX_HEADER:   backgroundcolor=\color{backcolour},
+#+LATEX_HEADER:   commentstyle=\color{codegreen},
+#+LATEX_HEADER:   keywordstyle=\color{magenta},
+#+LATEX_HEADER:   numberstyle=\tiny\color{codegray},
+#+LATEX_HEADER:   stringstyle=\color{codepurple},
+#+LATEX_HEADER:   basicstyle=\ttfamily\footnotesize,
+#+LATEX_HEADER:   breakatwhitespace=false,
+#+LATEX_HEADER:   breaklines=true,
+#+LATEX_HEADER:   captionpos=b,
+#+LATEX_HEADER:   keepspaces=true,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   numbersep=5pt,
+#+LATEX_HEADER:   showspaces=false,
+#+LATEX_HEADER:   showstringspaces=false,
+#+LATEX_HEADER:   showtabs=false,
+#+LATEX_HEADER:   tabsize=2
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \lstset{%
+#+LATEX_HEADER:   language=python,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   style=pythonstyle,
+#+LATEX_HEADER: }
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 * Introduction
@@ -34,7 +62,7 @@ Suppose we want to model the group from Exercise 1.1 of the previous class.
 Then we will need to specify the /objects/ and the /actions/ of the group.  We
 can use lists to hold the objects and functions to represent the actions.
 
-#+begin_src python :exports both
+#+begin_src python :exports code
   # group from 1.1 has as objects arrangements of a penny and a dime
   arrangement1 = ['penny', 'dime']
   arrangement2 = ['dime', 'penny']

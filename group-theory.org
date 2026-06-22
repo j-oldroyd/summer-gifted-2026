@@ -15,6 +15,30 @@
 #+startup: beamer
 #+LaTeX_CLASS: beamer
 #+latex_header: \mode<beamer>{\usetheme{moloch}}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
+#+LATEX_HEADER:   backgroundcolor=\color{backcolour},
+#+LATEX_HEADER:   commentstyle=\color{codegreen},
+#+LATEX_HEADER:   keywordstyle=\color{magenta},
+#+LATEX_HEADER:   numberstyle=\tiny\color{codegray},
+#+LATEX_HEADER:   stringstyle=\color{codepurple},
+#+LATEX_HEADER:   basicstyle=\ttfamily\footnotesize,
+#+LATEX_HEADER:   breakatwhitespace=false,
+#+LATEX_HEADER:   breaklines=true,
+#+LATEX_HEADER:   captionpos=b,
+#+LATEX_HEADER:   keepspaces=true,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   numbersep=5pt,
+#+LATEX_HEADER:   showspaces=false,
+#+LATEX_HEADER:   showstringspaces=false,
+#+LATEX_HEADER:   showtabs=false,
+#+LATEX_HEADER:   tabsize=2
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \lstset{%
+#+LATEX_HEADER:   language=python,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   style=pythonstyle,
+#+LATEX_HEADER: }
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 * Introduction
