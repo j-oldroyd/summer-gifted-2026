@@ -52,7 +52,10 @@ textbook [cite:@carterVisualGroupTheory2009].
 Consider the Rubik's Cube (for an online example, see [[https://onlinecube.com/][here]]).  What moves can we
 perform on a Rubik's cube?
 
-** Rules of moves
+** Rules of moves                                                  :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
 There are many, /many/ different configurations (or states) possible, but only
 one solution.  We can get from one state to another by performing a valid
 movement of the cube.  These movements have the following properties:
@@ -65,10 +68,10 @@ movement of the cube.  These movements have the following properties:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
-The website above uses twelve basic moves: \( F \), \( F' \), \( U \), \( U' \),
- and so on.  How can you write \( F' \) in terms of \( F \)?  What is the
- smallest number of moves you can find that represent all of the basic moves on
- a Rubik's cube?
+The website above uses twelve basic moves: \( \mathsf{F} \), \( \mathsf{F}' \),
+ \( \mathsf{U} \), \( \mathsf{U}' \), and so on.  How can you write \(
+ \mathsf{F}' \) in terms of \( \mathsf{F} \)?  What is the smallest number of
+ moves you can find that represent all of the basic moves on a Rubik's cube?
 
 The observations above form the basis of a mathematical structure called a
 *group*.  Groups appear throughout mathematics and its applications.
@@ -139,8 +142,25 @@ e) There are infinitely many actions.
 Devise a situation that satisfies all of the group rules except for the second,
 third or fourth depending on your group.
 
-** Rubik's cube group                                            :B_example:
+* Rubik's cube group
+** Terminology                                                     :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+The *cubies* on a Rubik's cube can be placed in the following categories:
+1. Corner cubies
+2. Edge cubies
+3. Center cubies
+** Group actions and cubies                                      :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
-What should the Rubik's cube group look like?
+What happens to cubies in the previous categories if you apply any of the six
+basic Rubik's cube actions?
+** Size of the Rubik's cube group                                :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+The Rubik's cube group is based on the six fundamental motions \( \mathsf{F} \),
+\( \mathsf{B} \), \( \mathsf{U} \), \( \mathsf{D} \), \( \mathsf{L} \) and \(
+\mathsf{R} \).  How large could this group be?
