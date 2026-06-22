@@ -1,15 +1,35 @@
 #+TITLE: Group Theory Notes
-#+AUTHOR: Jesse Ernest Oldroyd
+#+AUTHOR: Jesse Oldroyd
+#+DATE: <2026-06-22 Mon>
 #+EMAIL: oldroyd.j@wvwc.edu
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+HTML_LINK_UP:
+#+HTML_LINK_HOME:
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+latex_header: \mode<beamer>{\usetheme{moloch}}
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
-These are notes for WVWC's 2026 Summer Gifted program.  In these notes, we will
-look at exploring groups using Python.
-
-* <2026-06-22 Mon>
-We will use Python in this course to perform mathematical computations.  For the
+* Introduction
+** Python                                                          :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+We will use @Python@ in this course to perform mathematical computations.  For the
 first part of the computer science course, we will look at how to use Python to
 work with groups.
 
+** A simple group in Python                                        :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
 Suppose we want to model the group from Exercise 1.1 of the previous class.
 Then we will need to specify the /objects/ and the /actions/ of the group.  We
 can use lists to hold the objects and functions to represent the actions.
@@ -28,8 +48,12 @@ can use lists to hold the objects and functions to represent the actions.
           return ['penny', 'dime']
 #+end_src
 
-**Example**: Find the result of performing the group action twice in a row using
- the code above.
+** Group actions in Python                                       :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Find the result of performing the group action twice in a row using the code
+above.
 
- /Answer/: We can find the answer by computing
- ~group_action(group_action(arrangement))~ for the various arrangements.
+/Answer/: We can find the answer by computing
+~group_action(group_action(arrangement))~ for the various arrangements.
