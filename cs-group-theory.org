@@ -133,3 +133,28 @@ Implement the symmetry group of the equilateral triangle in Python.
 :END:
 This is more complicated than previous examples.  Try working out examples by
 hand, then implementing in Python with a ~for~ loop.
+** Permutations in Python
+- The SymPy library lets us handle permutations in cycle notation relatively
+  easily.
+- First, we need to import the permutation commands as follows:
+
+    #+begin_src python :session :exports code
+      from sympy.combinatorics import Permutation
+      R = Permutation(1, 2, 3) # cycle (123)
+  #+end_src
+** Computations from \( S_3 \)
+*** Rotation followed by flip                                   :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Let \( R \) denote clockwise rotation of the equilateral triangle by \(
+120^{\circ} \) and let \( F \) denote the reflection that leaves vertex \( 1 \)
+unchanged.  Using SymPy, find \( R\ast F \) and \( F\ast R \).
+** More Computations
+*** Klein Four Group                                            :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+The symmetry group of a non-square rectangle is called the /Klein Four Group/.
+Create the elements of this group in Python using SymPy as above.  Does the
+order of "multiplication" matter in this group?
