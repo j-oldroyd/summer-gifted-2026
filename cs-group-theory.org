@@ -13,7 +13,9 @@
 #+HTML_LINK_HOME:
 #+startup: beamer
 #+LaTeX_CLASS: beamer
-#+latex_header: \mode<beamer>{\usetheme{moloch}}
+#+LATEX_HEADER: \mode<beamer>{\usetheme{moloch}}
+#+LATEX_HEADER: \molochset{block=fill}
+#+LATEX_HEADER: \setbeameroption{show notes on second screen}
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \definecolor{codegreen}{rgb}{0,0.6,0}
 #+LATEX_HEADER: \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -52,7 +54,7 @@
 We will use *Python* in this course to perform mathematical computations.  For the
 first part of the computer science course, we will look at how to use Python to
 work with groups.  We will primarily interact with Python using the *Spyder* IDE.
-** Python fundamentals                                             :B_frame:
+** Python Fundamentals                                             :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
@@ -60,9 +62,9 @@ The fundamental objects we need from Python are:
 - *lists*: ~[obj1, obj2, ...]~
 - *functions*: ~def func(x): ...~
 * Creating Groups in Python
-** A simple group in Python                                   :B_alertblock:
+** A Simple Group in Python                                        :B_frame:
 :PROPERTIES:
-:BEAMER_env: alertblock
+:BEAMER_env: frame
 :END:
 Suppose we want to model the coins group of the previous class.  Then we will
 need to specify the /objects/ and the /actions/ of the group.  We can use lists
@@ -75,11 +77,11 @@ to hold the objects...
   objects = [arrangement1, arrangement2]
 #+END_src
 
-** A simple group in Python                                        :B_frame:
+** A Simple Group in Python                                        :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
-and functions to represent the actions:
+...and functions to represent the actions:
 #+BEGIN_src python :exports both :session :results output
   # our action takes arrangement1 and turns it into arrangement2, and
   # vice-versa
@@ -98,19 +100,36 @@ and functions to represent the actions:
 : ['nickel', 'penny']
 : ['penny', 'nickel']
 
-** Group actions in Python                                       :B_example:
+** Group Actions in Python
+*** Combining group actions using Python                        :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
 Find the result of performing the group action twice in a row using the code
 above.
 
-/Answer/: We can find the answer by computing
-~group_action(group_action(arrangement))~ for the various arrangements...
-
-** Words group again                                             :B_example:
+*** Words group again                                           :B_example:
 :PROPERTIES:
 :BEAMER_env: example
 :END:
 Implement the "three letter words" group in Python.  Be careful to specify the
 objects and the actions!
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+There should be six objects and six actions that act on the objects!
+** Symmetry Groups in Python
+Recall that a symmetry group of a geometric figure is the set of actions that
+preserves the shape of that figure.
+*** Symmetry group of equilateral triangle                      :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Implement the symmetry group of the equilateral triangle in Python.
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+This is more complicated than previous examples.  Try working out examples by
+hand, then implementing in Python with a ~for~ loop.
