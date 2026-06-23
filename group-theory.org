@@ -15,7 +15,7 @@
 #+LaTeX_CLASS: beamer
 #+latex_header: \mode<beamer>{\usetheme{moloch}}
 #+LATEX_HEADER: \molochset{block=fill}
-#+LATEX_HEADER: \setbeameroption{show notes on second screen}
+
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
 #+LATEX_HEADER:   backgroundcolor=\color{backcolour},
