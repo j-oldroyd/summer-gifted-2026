@@ -196,6 +196,94 @@ a) Breaks second rule: can use naturals with addition or an action that "erases"
 b) Think of symmetry group where we rotate or flip based on results of coin toss.
 c) We already have an example of this.  We can also look at limited symmetry
    groups (i.e., subgroups that aren't closed).
+* Permutations
+** Permutation
+- A *permutation* of an ordered collection of objects is a rearrangement of
+  those objects.
+- Every group action we've looked at so far is an example of a permutation.
+*** Permutations and groups                                     :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+List the permutations and the objects being permuted for the following groups:
+1. The three letter word group (see [[*Three letter words][Example (Three letter words)]]).
+2. The symmetry group of the equilateral triangle (see [[*Symmetry groups][Symmetry Groups (slide)]]).
+** Symmetry Groups
+- Shapes have symmetry groups (also called /dihedral groups/).
+- Collections of objects also have symmetry groups.  The actions are
+  permutations.
+*** Elements of a symmetry group                                :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Give two elements of the symmetry group of \( \{1, 2, 3, 4\} \).
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+Note the connection to previous permutations!
+*** Number of elements of a symmetry group                      :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+How many elements are in the symmetry group above?
+** Composition of Permutations
+- Two permutations on the same set of elements can be combined.
+*** Combining permutations                                      :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Let
+#+begin_src latex :exports results
+  \[
+      \sigma = \left(
+      \begin{array}{llllll}
+        1 & 2 & 3 & 4 & 5 & 6 \\
+        3 & 5 & 4 & 6 & 2 & 1
+      \end{array}
+  \right), \rho = \left(
+      \begin{array}{llllll}
+        1 & 2 & 3 & 4 & 5 & 6 \\
+        3 & 1 & 4 & 6 & 2 & 5
+      \end{array}
+  \right)
+  \]
+#+end_src
+Find \( \sigma\rho \).
+** Cycle Notation
+- The permutation \( \sigma\in S_3 \) given by
+
+#+begin_src latex :exports results
+  \[
+      \left( \begin{array}{lll}
+        1 & 2 & 3 \\
+        \downarrow & \downarrow{} & \downarrow{} \\
+        2 & 3 & 1
+      \end{array} \right)
+  \]
+#+end_src
+can be written as \( (231) \).
+*** More cycles
+Write the permutations \( \sigma \) and \( \rho \) from [[*Combining permutations][Example: Combining
+permutations]] using cycle notation.
+** \( S_n \)
+- The symmetry group on \( n \) elements is called \( S_n \).
+- You've already found \( S_3 \)!
+- Permutations in \( S_n \) can be written in cycle notation.
+** Cycle Notation Again
+*** Cycle notation in \( S_4 \)                                 :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Write the permutations you found in [[*Elements of a symmetry group][Example (Elements of a symmetry group)]] using
+cycle notation.
+** Combining Permutations Again
+- Cycle notation provides a convenient way to combine permutations.
+*** Combining permutations with cycles                          :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Find \( \sigma\rho \) using cycle notation.
 * Rubik's cube group
 ** Terminology                                                     :B_frame:
 :PROPERTIES:
@@ -246,60 +334,3 @@ following questions.
   arrangements for the corner cubies.
 2. The edge cubies have an upper bound of \( 12! 2^{12} \) arrangements.
 3. The upper bound for moves is therefore \( 8! 3^8 12! 2^{12} \).
-* Permutations
-** Permutation
-- A *permutation* of an ordered collection of objects is a rearrangement of
-  those objects.
-- Every group action we've looked at so far is an example of a permutation.
-*** Permutations and groups                                     :B_example:
-:PROPERTIES:
-:BEAMER_env: example
-:END:
-List the permutations and the objects being permuted for the following groups:
-1. The three letter word group (see [[*Three letter words][Example (Three letter words)]]).
-2. The symmetry group of the equilateral triangle (see [[*Symmetry groups][Symmetry Groups (slide)]]).
-** Symmetry Groups
-- Shapes have symmetry groups (also called /dihedral groups/).
-- Collections of objects also have symmetry groups.  The actions are
-  permutations.
-*** Elements of a symmetry group                                :B_example:
-:PROPERTIES:
-:BEAMER_env: example
-:END:
-Give two elements of the symmetry group of \( \{1, 2, 3, 4\} \).
-**** Note                                                       :B_noteNH:
-:PROPERTIES:
-:BEAMER_env: noteNH
-:END:
-Note the connection to previous permutations!
-*** Number of elements of a symmetry group                      :B_example:
-:PROPERTIES:
-:BEAMER_env: example
-:END:
-How many elements are in the symmetry group above?
-** \( S_n \)
-- The symmetry group on \( n \) elements is called \( S_n \).
-- You've already found \( S_3 \)!
-- Permutations in \( S_n \) can be written in *cycle notation*.
-** Cycle Notation
-The permutation \( \sigma\in S_3 \) given by
-
-#+begin_src latex :exports results
-  \[
-      \left( \begin{array}{lll}
-        1 & 2 & 3 \\
-        \downarrow & \downarrow{} & \downarrow{} \\
-        2 & 3 & 1
-      \end{array} \right)
-  \]
-#+end_src
-can be written as \( (231) \).
-** Cycle Notation
-*** Cycle notation in \( S_4 \)                                 :B_example:
-:PROPERTIES:
-:BEAMER_env: example
-:END:
-Write the permutations you found in [[*Elements of a symmetry group][Example (Elements of a symmetry group)]] using
-cycle notation.
-** Combining Permutations
-- Cycle notation provides a convenient way to combine permutations.
