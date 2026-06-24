@@ -133,16 +133,22 @@ Implement the symmetry group of the equilateral triangle in Python.
 :END:
 This is more complicated than previous examples.  Try working out examples by
 hand, then implementing in Python with a ~for~ loop.
+* Permutations with SymPy
 ** Permutations in Python
 - The SymPy library lets us handle permutations in cycle notation relatively
   easily.
-- First, we need to import the permutation commands as follows:
+- First, we need to import useful commands as follows:
 
     #+begin_src python :session :exports code
       from sympy.combinatorics import Permutation
-      R = Permutation(1, 2, 3) # cycle (123)
+      from sympy.combinatorics import PermutationGroup
+      from sympy.combinatorics import SymmetricGroup
   #+end_src
 ** Computations from \( S_3 \)
+- We can now create permutations as follows:
+  #+begin_src python :session :exports both :results output
+    R = Permutation(1, 2, 3)
+  #+end_src
 *** Rotation followed by flip                                   :B_example:
 :PROPERTIES:
 :BEAMER_env: example
@@ -158,3 +164,14 @@ unchanged.  Using SymPy, find \( R\ast F \) and \( F\ast R \).
 The symmetry group of a non-square rectangle is called the /Klein Four Group/.
 Create the elements of this group in Python using SymPy as above.  Does the
 order of "multiplication" matter in this group?
+** Even More Computations
+*** Cayley table                                                :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Find the Cayley table of the symmetry group of the square
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+Break into four groups; each group tackles two rows of the table
