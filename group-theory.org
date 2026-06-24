@@ -197,7 +197,7 @@ b) Think of symmetry group where we rotate or flip based on results of coin toss
 c) We already have an example of this.  We can also look at limited symmetry
    groups (i.e., subgroups that aren't closed).
 * Permutations
-** Permutation
+** Permutations
 - A *permutation* of an ordered collection of objects is a rearrangement of
   those objects.
 - Every group action we've looked at so far is an example of a permutation.
@@ -284,6 +284,20 @@ cycle notation.
 :BEAMER_env: example
 :END:
 Find \( \sigma\rho \) using cycle notation.
+** Cayley Tables
+A *Cayley table* is a multiplication table for a group.
+*** Cayley table for symmetry group                             :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Find the Cayley table for the symmetry group of the rectangle
+** Cayley Tables
+*** Cayley table for \( S_3 \)                                  :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Find the Cayley table for \( S_3 \) (i.e., the symmetry group of the equilateral
+triangle).
 * Rubik's cube group
 ** Terminology                                                     :B_frame:
 :PROPERTIES:
