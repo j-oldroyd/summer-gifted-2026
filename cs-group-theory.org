@@ -182,3 +182,30 @@ Find the Cayley table of the symmetry group of the square
 :BEAMER_env: noteNH
 :END:
 Break into four groups; each group tackles two rows of the table
+** Parity in SymPy
+- SymPy can easily compute the parity of a permutation:
+  #+begin_src python :exports both :session
+    R.parity() # = 0 since R is even
+  #+end_src
+** Modified 15-Puzzle
+*** Determine existence of solution                             :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Consider the following 15-puzzle:
+#+begin_src latex :exports results
+  \begin{figure}
+      \centering
+      \begin{fifteen}
+          \setrow{4}{8, 12, 2, 5}
+          \setrow{3}{11, 1, 6, 13}
+          \setrow{2}{7, 14, 10, 15}
+          \setrow{1}{9, 4, 3, }
+      \end{fifteen}
+
+      \caption{A modified 15-puzzle}
+      \label{fig:modified-fifteen-puzzle}
+  \end{figure}
+#+end_src
+Is it possible to solve this puzzle?  That is, do there exist moves that get the
+puzzle back into its solution state?
