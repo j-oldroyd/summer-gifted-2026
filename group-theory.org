@@ -257,7 +257,6 @@ Find \( \sigma\rho \).
   \[
       \left( \begin{array}{lll}
         1 & 2 & 3 \\
-        \downarrow & \downarrow{} & \downarrow{} \\
         2 & 3 & 1
       \end{array} \right)
   \]
