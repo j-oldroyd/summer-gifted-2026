@@ -329,10 +329,11 @@ Find the parity of the permutations \( \sigma \), \( \rho \) and \( \sigma\rho \
             \setrow{1}{13,15, 14, }
         \end{fifteen}
 
-        \caption{The 15-Puzzle}
+        \caption{The 15-puzzle}
         \label{fig:fifteen-puzzle}
     \end{figure}
   #+end_src
+
 ** Permutations and the 15-Puzzle
 *** Model a configuration                                       :B_example:
 :PROPERTIES:
@@ -349,11 +350,18 @@ Use a permutation to describe the following arrangement of the 15-puzzle:
         \setrow{1}{9, 4, 3, 13}
     \end{fifteen}
 
-    \caption{The 15-Puzzle}
-    \label{fig:fifteen-puzzle}
+    \caption{A shuffled 15-puzzle}
+    \label{fig:shuffled-fifteen-puzzle}
   \end{figure}
 #+end_src
 What permutation describes the solution?
+** Parity Again
+*** Find parity of configurations                               :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Determine the parities of the permutations corresponding to the puzzles in the
+previous examples, and find the parity of the solution of the 15-puzzle.
 ** Impossibility of the 15-Puzzle
 *** Nonexistence of solution                                    :B_theorem:
 :PROPERTIES:
