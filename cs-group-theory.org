@@ -17,6 +17,7 @@
 #+LATEX_HEADER: \molochset{block=fill}
 #+LATEX_HEADER: \setbeameroption{show notes on second screen}
 #+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{logicpuzzle}
 #+LATEX_HEADER: \definecolor{codegreen}{rgb}{0,0.6,0}
 #+LATEX_HEADER: \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 #+LATEX_HEADER: \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -44,6 +45,12 @@
 #+LATEX_HEADER:   numbers=left,
 #+LATEX_HEADER:   style=pythonstyle,
 #+LATEX_HEADER: }
+#+LATEX_HEADER: \newenvironment{fifteen}[1][]{%
+#+LATEX_HEADER: \begin{logicpuzzle}[rows=4,columns=4,#1]
+#+LATEX_HEADER: \begin{puzzleforeground}
+#+LATEX_HEADER: \framepuzzle
+#+LATEX_HEADER: \end{puzzleforeground}
+#+LATEX_HEADER: }{\end{logicpuzzle}}
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 * Introduction

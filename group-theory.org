@@ -17,6 +17,7 @@
 #+LATEX_HEADER: \molochset{block=fill}
 #+LATEX_HEADER: \setbeameroption{show notes on second screen}
 #+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{logicpuzzle}
 #+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
 #+LATEX_HEADER:   backgroundcolor=\color{backcolour},
 #+LATEX_HEADER:   commentstyle=\color{codegreen},
@@ -40,6 +41,12 @@
 #+LATEX_HEADER:   numbers=left,
 #+LATEX_HEADER:   style=pythonstyle,
 #+LATEX_HEADER: }
+#+LATEX_HEADER: \newenvironment{fifteen}[1][]{%
+#+LATEX_HEADER: \begin{logicpuzzle}[rows=4,columns=4,#1]
+#+LATEX_HEADER: \begin{puzzleforeground}
+#+LATEX_HEADER: \framepuzzle
+#+LATEX_HEADER: \end{puzzleforeground}
+#+LATEX_HEADER: }{\end{logicpuzzle}}
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 * Introduction
@@ -297,6 +304,62 @@ Find the Cayley table for the symmetry group of the rectangle
 :END:
 Find the Cayley table for \( S_3 \) (i.e., the symmetry group of the equilateral
 triangle).
+** Even and Odd Permutations
+- Permutations can be categorized as *even* or *odd* based on how many
+  switches they perform
+- This is called the *parity* of the permutation
+*** Determine parity in \( S_3 \)                               :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Find the parity of the permutations \( (12) \) and \( (123) \).
+*** Determine parity in \( S_6 \)                             :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Find the parity of the permutations \( \sigma \), \( \rho \) and \( \sigma\rho \).
+** The 15-Puzzle
+- The 15-Puzzle was a fad in nineteenth century America
+- The goal is to solve the puzzle to put the numbers in order:
+  #+begin_src latex :exports results
+    \begin{figure}
+        \centering
+        \begin{fifteen}
+            \setrow{4}{1,2,3,4} \setrow{3}{5,6,7,8} \setrow{2}{9,10,11,12}
+            \setrow{1}{13,15, 14, }
+        \end{fifteen}
+
+        \caption{The 15-Puzzle}
+        \label{fig:fifteen-puzzle}
+    \end{figure}
+  #+end_src
+** Permutations and the 15-Puzzle
+*** Model a configuration                                       :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Use a permutation to describe the following arrangement of the 15-puzzle:
+#+begin_src latex :exports results
+  \begin{figure}
+    \centering
+    \begin{fifteen}
+        \setrow{4}{8, 12, 2, 5}
+        \setrow{3}{11, 1, 6,}
+        \setrow{2}{7, 14, 10, 15}
+        \setrow{1}{9, 4, 3, 13}
+    \end{fifteen}
+
+    \caption{The 15-Puzzle}
+    \label{fig:fifteen-puzzle}
+  \end{figure}
+#+end_src
+What permutation describes the solution?
+** Impossibility of the 15-Puzzle
+*** Nonexistence of solution                                    :B_theorem:
+:PROPERTIES:
+:BEAMER_env: theorem
+:END:
+There is no solution of the 15-puzzle.
 * Rubik's cube group
 ** Terminology                                                     :B_frame:
 :PROPERTIES:
