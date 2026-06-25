@@ -362,6 +362,9 @@ What permutation describes the solution?
 :END:
 Determine the parities of the permutations corresponding to the puzzles in the
 previous examples, and find the parity of the solution of the 15-puzzle.
+*** Parity of moves in the 15-puzzle
+Every valid configuration in the 15-puzzle (that is, moves that place the empty spot in
+position 16) corresponds to an even permutation.
 ** Impossibility of the 15-Puzzle
 *** Nonexistence of solution                                    :B_theorem:
 :PROPERTIES:
