@@ -332,7 +332,6 @@ with two opposite corners removed using \( 2\times1 \) dominoes.
   % Taken from
   % https://tex.stackexchange.com/a/414006/60075
   \begin{figure}
-      \caption{Chess board with opposite diagonal corner pieces missing.}
       \label{fig:mutilated_chessboard}
       \begin{center}
           \begin{tikzpicture}[scale=0.5, transform shape]
@@ -364,10 +363,23 @@ with two opposite corners removed using \( 2\times1 \) dominoes.
                 \path[fill=\colour] (\x,\y) rectangle ++ (1,1);
               }
               \draw (0,0)--(0,8)--(8,8)--(8,0)--cycle;
+              \draw (0,7)--(1,7)--(1,8);
+              \draw (7,0)--(7,1)--(8,1);
           \end{tikzpicture}
+          \caption{Chessboard with two corner pieces missing.}
       \end{center}
   \end{figure}
 #+end_src
+** Invariants and Solvability
+- No matter how you place dominoes on the chessboard, there is something that
+  must be true of each domino.  This is an invariant of the puzzle.
+*** Impossibility of solution                                   :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Explain why the chessboard puzzle is not solvable.  /Hint/: find an invariant
+for the puzzle, i.e., something that must be true no matter how you place
+dominoes on the puzzle.
 ** The 15-Puzzle
 - The goal is to solve the puzzle to put the numbers in order (i.e., swap the
   14 and 15 squares)
@@ -433,8 +445,8 @@ There is no solution of the 15-puzzle.
 :PROPERTIES:
 :BEAMER_env: example
 :END:
-Suppose we don't want the empty square to end up on the bottom left, but rather
-the bottom right:
+Suppose we don't want the empty square to end up on the bottom right, but rather
+the bottom left:
 #+begin_src latex :exports results
   \begin{figure}
       \centering
@@ -445,7 +457,7 @@ the bottom right:
           \setrow{1}{,13,14,15}
       \end{fifteen}
 
-      \caption{The 15-puzzle}
+      \caption{The modified 15-puzzle.}
       \label{fig:fifteen-puzzle-variation}
   \end{figure}
 #+end_src
