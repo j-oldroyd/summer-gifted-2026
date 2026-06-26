@@ -1,24 +1,25 @@
 from sympy.combinatorics import Permutation
 from sympy.combinatorics import SymmetricGroup
 from sympy.combinatorics import PermutationGroup
+from sympy import TableForm
 
 G = SymmetricGroup(3)
 
 print('Cayley table of S3')
-print('='*30)
-print('\t|\t'.join([str(perm) for perm in G.elements]), '|')
-print('='*52)
+print('='*18)
 
 table = []
+row = []
 i,j = 0,0
 for sigma in G.elements:
     for rho in G.elements:
-        row.append(str(sigma*rho))
-        j += 1
-    row.append('\n')
-    # row.insert(0, '||')
-    row.insert(0, str(sigma))
-    # table.append(row)
-    print('\t|\t'.join(row))
+        row.append(sigma*rho)
+
+    row.insert(0, sigma)
+    table.append(row)
     row = []
-    i += 1
+
+table.insert(0, [perm for perm in G.elements])
+table[0].insert(0, '')
+
+TableForm(table)
