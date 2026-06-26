@@ -18,6 +18,7 @@
 #+LATEX_HEADER: \setbeameroption{show notes on second screen}
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \usepackage{logicpuzzle}
+#+LATEX_HEADER: \usepackage{tikz}
 #+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
 #+LATEX_HEADER:   backgroundcolor=\color{backcolour},
 #+LATEX_HEADER:   commentstyle=\color{codegreen},
@@ -318,9 +319,60 @@ Find the parity of the permutations \( (12) \) and \( (123) \).
 :BEAMER_env: example
 :END:
 Find the parity of the permutations \( \sigma \), \( \rho \) and \( \sigma\rho \).
+** Permutation Puzzles
+- Many classic puzzles (including the Rubik's Cube) can be described in terms of
+  permutations
+- Knowing something about the allowed permutations tells us about the puzzle itself!
+- These puzzles often have *invariants* that we can use to analyze them
+** Mutilated Chessboard Puzzle
+- The Mutilated Chessboard Puzzle asks if it is possible to cover a chessboard
+with two opposite corners removed using \( 2\times1 \) dominoes.
+** Mutilated Chessboard Puzzle
+#+begin_src latex :exports results
+  % Taken from
+  % https://tex.stackexchange.com/a/414006/60075
+  \begin{figure}
+      \caption{Chess board with opposite diagonal corner pieces missing.}
+      \label{fig:mutilated_chessboard}
+      \begin{center}
+          \begin{tikzpicture}[scale=0.5, transform shape]
+              \foreach \x in {0,...,7} \foreach \y in {0,...,7}
+              {
+                \pgfmathparse{mod(\x+\y,2) ? "black" : "white"}
+                \edef\colour{\pgfmathresult}
+                % This one for the bottom-left and top-right corners
+                % \ifnum\x=\y
+                %     \ifnum\x=7
+                %         \def\colour{black}
+                %     \else\ifnum\x=0
+                %             \def\colour{black}
+                %         \fi\fi
+                % \fi
+                % % % % % %
+                % And this one for the top-left and bottom-right corners
+                \ifnum\x=\numexpr\y-7
+                    \ifnum\x=0
+                        \def\colour{white}
+                    \fi
+                \fi
+                \ifnum\y=\numexpr\x-7
+                    \ifnum\y=0
+                        \def\colour{white}
+                    \fi
+                \fi
+                % % % % % %
+                \path[fill=\colour] (\x,\y) rectangle ++ (1,1);
+              }
+              \draw (0,0)--(0,8)--(8,8)--(8,0)--cycle;
+          \end{tikzpicture}
+      \end{center}
+  \end{figure}
+#+end_src
 ** The 15-Puzzle
-- The 15-Puzzle was a fad in nineteenth century America
-- The goal is to solve the puzzle to put the numbers in order:
+- The goal is to solve the puzzle to put the numbers in order (i.e., swap the
+  14 and 15 squares)
+
+- The blank square must be on the bottom right at the end
   #+begin_src latex :exports results
     \begin{figure}
         \centering
@@ -360,7 +412,6 @@ Use a permutation to describe the following arrangement of the 15-puzzle:
     \label{fig:shuffled-fifteen-puzzle}
   \end{figure}
 #+end_src
-What permutation describes the solution?
 ** Parity Again
 *** Find parity of configurations                               :B_example:
 :PROPERTIES:
@@ -377,6 +428,28 @@ position 16) corresponds to an even permutation.
 :BEAMER_env: theorem
 :END:
 There is no solution of the 15-puzzle.
+** Variation of the 15-Puzzle
+*** Empty square on bottom left                                 :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Suppose we don't want the empty square to end up on the bottom left, but rather
+the bottom right:
+#+begin_src latex :exports results
+  \begin{figure}
+      \centering
+      \begin{fifteen}
+          \setrow{4}{1,2,3,4}
+          \setrow{3}{5,6,7,8}
+          \setrow{2}{9,10,11,12}
+          \setrow{1}{,13,14,15}
+      \end{fifteen}
+
+      \caption{The 15-puzzle}
+      \label{fig:fifteen-puzzle-variation}
+  \end{figure}
+#+end_src
+Is the puzzle now solvable?
 * Rubik's cube group
 ** Terminology                                                     :B_frame:
 :PROPERTIES:
