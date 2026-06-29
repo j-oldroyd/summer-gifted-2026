@@ -52,3 +52,5 @@ U = (
     * Permutation(10, 34, 26, 18)
     * Permutation(11, 35, 27, 19)
 )
+
+G = PermutationGroup(F, B, L, R, D, U)
