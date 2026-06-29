@@ -1,0 +1,93 @@
+#+TITLE: Group Theory Notes
+#+AUTHOR: Jesse Oldroyd
+#+EMAIL: oldroyd.j@wvwc.edu
+#+DESCRIPTION: Group theory notes for WVWC 2026 summer gifted notes, based on Visual Group Theory.
+#+KEYWORDS: group theory
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+HTML_LINK_UP:
+#+HTML_LINK_HOME:
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+latex_header: \mode<beamer>{\usetheme{moloch}}
+#+LATEX_HEADER: \molochset{block=fill}
+#+LATEX_HEADER: \setbeameroption{show notes on second screen}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{logicpuzzle}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{graphs}
+#+LATEX_HEADER: \usepackage{tkz-graph}
+#+LATEX_HEADER: \usepackage{subcaption}
+#+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
+#+LATEX_HEADER:   backgroundcolor=\color{backcolour},
+#+LATEX_HEADER:   commentstyle=\color{codegreen},
+#+LATEX_HEADER:   keywordstyle=\color{magenta},
+#+LATEX_HEADER:   numberstyle=\tiny\color{codegray},
+#+LATEX_HEADER:   stringstyle=\color{codepurple},
+#+LATEX_HEADER:   basicstyle=\ttfamily\footnotesize,
+#+LATEX_HEADER:   breakatwhitespace=false,
+#+LATEX_HEADER:   breaklines=true,
+#+LATEX_HEADER:   captionpos=b,
+#+LATEX_HEADER:   keepspaces=true,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   numbersep=5pt,
+#+LATEX_HEADER:   showspaces=false,
+#+LATEX_HEADER:   showstringspaces=false,
+#+LATEX_HEADER:   showtabs=false,
+#+LATEX_HEADER:   tabsize=2
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \lstset{%
+#+LATEX_HEADER:   language=python,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   style=pythonstyle,
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \newenvironment{fifteen}[1][]{%
+#+LATEX_HEADER: \begin{logicpuzzle}[rows=4,columns=4,#1]
+#+LATEX_HEADER: \begin{puzzleforeground}
+#+LATEX_HEADER: \framepuzzle
+#+LATEX_HEADER: \end{puzzleforeground}
+#+LATEX_HEADER: }{\end{logicpuzzle}}
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+
+* Introduction to Graph Theory
+** Networks and Relationships
+- Much like group theory is the mathematical language of symmetry, graph theory
+  provides languages for expressing relationships
+*** Applications of graph theory
+- Modeling networks
+- Chemistry
+- Machine learning
+- Routing problems
+** Terminology
+- A *graph* \( \mathcal{G} = (V, E) \) is a set \( V \) of *vertices* together with a set
+  \( E \) of *edges*.  Two vertices are *adjacent* if they are connected by an edge.
+- A *simple graph* is a graph with at most one edge between any pair of vertices
+  and no loops.
+  #+begin_src latex :exports results
+    \begin{figure}
+        \centering
+        \begin{subfigure}
+            \caption{A graph that is not simple.}
+            \begin{tikzpicture}[scale=1.75]
+                \GraphInit[vstyle=normal] \Vertex{A} \Vertex[x=4,y=0]{B}
+                \Vertex[x=1,y=2]{C} \Edge[style={bend left}](B)(A)
+                \Edges(A,B,C,A)
+            \end{tikzpicture}
+        \end{subfigure}
+        \begin{subfigure}
+          \caption{A simple graph.}
+            \begin{tikzpicture}[scale=1.75]
+                \GraphInit[vstyle=Art]
+                \Vertex{A}
+                \Vertex[x=4,y=0]{B}
+                \Vertex[x=1,y=2]{C}
+                \Edge[style={bend left}](B)(A)
+                \Edges(A,B,C,A)
+            \end{tikzpicture}
+        \end{subfigure}
+    \end{figure}
+  #+end_src
