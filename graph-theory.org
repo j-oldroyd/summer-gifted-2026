@@ -72,9 +72,8 @@
   #+begin_src latex :exports results
     \begin{figure}
         \centering
-        \begin{subfigure}{.4\textwidth}
-            \caption{A graph that is not simple.}
-            \begin{tikzpicture}[scale=1]
+        \begin{subcaptionbox}{A graph that is not simple.}[.4\textwidth]{%
+            \begin{tikzpicture}[scale=.75]
                 \GraphInit[vstyle=normal]
                 \Vertex{A}
                 \Vertex[x=4,y=0]{B}
@@ -82,17 +81,19 @@
                 \Edge[style={bend left}](B)(A)
                 \Edges(A,B,C,A)
             \end{tikzpicture}
-        \end{subfigure}
-        \begin{subfigure}{.4\textwidth}
-          \caption{A simple graph.}
-            \begin{tikzpicture}[scale=1]
+            }
+        \end{subcaptionbox}
+        \medskip
+        \begin{subcaptionbox}{A graph that is simple.}[.4\textwidth]{%
+            \begin{tikzpicture}[scale=.75]
                 \GraphInit[vstyle=normal]
                 \Vertex{A}
                 \Vertex[x=4,y=0]{B}
                 \Vertex[x=1,y=2]{C}
                 \Edges(A,B,C,A)
             \end{tikzpicture}
-        \end{subfigure}
+            }
+        \end{subcaptionbox}
     \end{figure}
   #+end_src
 ** Friendship
@@ -120,7 +121,6 @@ Find the following using the graph below:
 #+begin_src latex :exports results
   \begin{figure}
       \centering
-      \caption{A graph that is not simple.}
       \begin{tikzpicture}[scale=1]
           \GraphInit[vstyle=normal]
           \Vertex{1}
