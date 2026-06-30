@@ -84,7 +84,7 @@ Find the adjacency matrix for the following graph:
 #+end_src
 ** Matrices and Python
 - Matrices can be handled in Python using the NumPy ~arrays~:
-  #+begin_src python :exports code
+  #+begin_src python :exports code :session
     import numpy as np
 
     A = np.array([
@@ -132,3 +132,19 @@ Use the adjacency matrix to answer the following questions:
       \end{tikzpicture}
   \end{figure}
 #+end_src
+** Drawing Graphs
+- We can draw graphs using NetworkX and matplotlib.
+  #+begin_src python :session :exports both
+    import matplotlib.pyplot as plt
+    import networkx as nx
+
+    G = nx.from_numpy_array(A)
+
+    nx.display(G)
+    plt.show()
+  #+end_src
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+This code should be continued from previous code!
