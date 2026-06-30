@@ -134,7 +134,7 @@ Use the adjacency matrix to answer the following questions:
 #+end_src
 ** Drawing Graphs
 - We can draw graphs using NetworkX and matplotlib.
-  #+begin_src python :session :exports both
+  #+begin_src python :session :exports code
     import matplotlib.pyplot as plt
     import networkx as nx
 
@@ -148,6 +148,12 @@ Use the adjacency matrix to answer the following questions:
 :BEAMER_env: noteNH
 :END:
 This code should be continued from previous code!
+** Drawing Graphs Again
+*** Utility graph                                               :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Plot the utility graph using Python.
 ** Gale-Shapley Algorithm
 *** Using the algorithm in Python
 Using the provided algorithm ~gale_shapley_algorithm.py~, solve the stable
