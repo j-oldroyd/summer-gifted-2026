@@ -56,12 +56,66 @@
 * Computer Science and Graph Theory
 ** Representing Graphs
 - Graphs can be represented using *adjacency matrices*
-*** Finding an adjacency matrix
+- Adjacency matrices are rectangular arrays that use \( 1 \) to indicate edges
+  in a graph
+*** Finding an adjacency matrix                                 :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
 Find the adjacency matrix for the following graph:
 #+begin_src latex :exports results
   \begin{figure}
       \centering
-      \caption{A graph that is not simple.}
+      \begin{tikzpicture}[scale=1]
+          \GraphInit[vstyle=normal]
+          \Vertex{1}
+          \EA(1){2}
+          \SOEA(2){3}
+          \WE(3){4}
+          \NOWE(2){5}
+          \NOEA(3){6}
+          \NOWE(6){7}
+          \Edges(1,4,2,5,1,2)
+          \Edges(4,5,7,2,4)
+          \Edges(4, 3, 7)
+          \Edge(7)(6)
+      \end{tikzpicture}
+  \end{figure}
+#+end_src
+** Matrices and Python
+- Matrices can be handled in Python using the NumPy ~arrays~:
+  #+begin_src python :exports code
+    import numpy as np
+
+    A = np.array([
+        [0, 1, 0, 1, 1, 0, 0],
+        [1, 0, 0, 1, 1, 0, 1],
+        [0, 0, 0, 1, 0, 0, 1],
+        [1, 1, 1, 0, 1, 0, 0],
+        [1, 1, 0, 1, 0, 0, 1],
+        [0, 0, 0, 0, 0, 0, 1],
+        [0, 1, 1, 0, 1, 1, 0]
+    ])
+  #+end_src
+** Operations on Arrays
+- NumPy provides many operations to use with arrays
+  1. Column/row sums with ~sum~ (/not/ ~np.sum~).  This is useful for finding
+     degrees of vertices.
+  2. Matrix multiplication with ~@~ (such as ~A@A~).  This is useful for
+     counting paths between vertices.
+** Information from Adjacency Matrices
+*** Adjacency matrices, paths and degrees                       :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Use the adjacency matrix to answer the following questions:
+1. What is the degree of each vertex?
+2. How many paths of length two are there between vertex \( 4 \) and vertex \( 7
+   \)?
+3. How many cycles of length four start at vertex \( 2 \)?
+#+begin_src latex :exports results
+    \begin{figure}
+      \centering
       \begin{tikzpicture}[scale=1]
           \GraphInit[vstyle=normal]
           \Vertex{1}
