@@ -18,16 +18,18 @@ unfilled_positions = list(employer_prefs.keys())
 filled_positions = {}
 
 while unfilled_positions:
-    job = unfilled_positions.pop(0) # get first unfilled position
-    prefs = employer_prefs[job] # get applicant preferences for that position
+    job = unfilled_positions.pop(0)  # get first unfilled position
+    prefs = employer_prefs[job]  # get applicant preferences for that position
 
     for applicant in prefs:
         current_applicant_prefs = applicant_prefs[applicant]
-        current_job = filled_positions.get(applicant)
-        if current_job is None:
+        current_applicant_job = filled_positions.get(applicant)
+        if current_applicant_job is None:
             filled_positions[applicant] = job
             break
-        elif current_applicant_prefs.index(current_job) > current_applicant_prefs.index(job):
+        elif current_applicant_prefs.index(
+            current_applicant_job
+        ) > current_applicant_prefs.index(job):
             filled_positions[applicant] = job
-            unfilled_positions.append(current_job)
+            unfilled_positions.append(current_applicant_job)
             break
