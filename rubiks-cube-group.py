@@ -20,7 +20,6 @@ D = (
     * Permutation(41, 43, 48, 46)
     * Permutation(42, 45, 47, 44)
 )
-
 F = (
     Permutation(6, 25, 43, 16)
     * Permutation(7, 28, 42, 13)
@@ -28,7 +27,6 @@ F = (
     * Permutation(17, 19, 24, 22)
     * Permutation(18, 21, 23, 20)
 )
-
 L = (
     Permutation(1, 17, 41, 40)
     * Permutation(4, 20, 44, 37)
@@ -36,7 +34,6 @@ L = (
     * Permutation(9, 11, 16, 14)
     * Permutation(10, 13, 15, 12)
 )
-
 R = (
     Permutation(3, 38, 43, 19)
     * Permutation(5, 36, 45, 21)
@@ -44,7 +41,6 @@ R = (
     * Permutation(25, 27, 32, 30)
     * Permutation(26, 29, 31, 28)
 )
-
 U = (
     Permutation(1, 3, 8, 6)
     * Permutation(2, 5, 7, 4)
@@ -52,5 +48,4 @@ U = (
     * Permutation(10, 34, 26, 18)
     * Permutation(11, 35, 27, 19)
 )
-
-G = PermutationGroup(F, B, L, R, D, U)
+G = PermutationGroup(L, R, D, U)
