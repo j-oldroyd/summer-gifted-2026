@@ -124,7 +124,7 @@ Find the following using the graph below:
       \begin{tikzpicture}[scale=1]
           \GraphInit[vstyle=normal]
           \Vertex{1}
-          \SOWE(1){2}
+          \EA(1){2}
           \SOEA(2){3}
           \WE(3){4}
           \NOWE(2){5}
