@@ -1,0 +1,80 @@
+#+TITLE: CompSci Graph Theory Notes
+#+AUTHOR: Jesse Oldroyd
+#+EMAIL: oldroyd.j@wvwc.edu
+#+DESCRIPTION: Graph theory notes for WVWC 2026 summer gifted notes.
+#+KEYWORDS: graph theory
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+HTML_LINK_UP:
+#+HTML_LINK_HOME:
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+latex_header: \mode<beamer>{\usetheme{moloch}}
+#+LATEX_HEADER: \molochset{block=fill}
+#+LATEX_HEADER: \setbeameroption{show notes on second screen}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{logicpuzzle}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{graphs}
+#+LATEX_HEADER: \usepackage{tkz-graph}
+#+LATEX_HEADER: \usepackage{subcaption}
+#+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
+#+LATEX_HEADER:   backgroundcolor=\color{backcolour},
+#+LATEX_HEADER:   commentstyle=\color{codegreen},
+#+LATEX_HEADER:   keywordstyle=\color{magenta},
+#+LATEX_HEADER:   numberstyle=\tiny\color{codegray},
+#+LATEX_HEADER:   stringstyle=\color{codepurple},
+#+LATEX_HEADER:   basicstyle=\ttfamily\footnotesize,
+#+LATEX_HEADER:   breakatwhitespace=false,
+#+LATEX_HEADER:   breaklines=true,
+#+LATEX_HEADER:   captionpos=b,
+#+LATEX_HEADER:   keepspaces=true,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   numbersep=5pt,
+#+LATEX_HEADER:   showspaces=false,
+#+LATEX_HEADER:   showstringspaces=false,
+#+LATEX_HEADER:   showtabs=false,
+#+LATEX_HEADER:   tabsize=2
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \lstset{%
+#+LATEX_HEADER:   language=python,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   style=pythonstyle,
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \newenvironment{fifteen}[1][]{%
+#+LATEX_HEADER: \begin{logicpuzzle}[rows=4,columns=4,#1]
+#+LATEX_HEADER: \begin{puzzleforeground}
+#+LATEX_HEADER: \framepuzzle
+#+LATEX_HEADER: \end{puzzleforeground}
+#+LATEX_HEADER: }{\end{logicpuzzle}}
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+
+* Computer Science and Graph Theory
+** Representing Graphs
+- Graphs can be represented using *adjacency matrices*
+*** Finding an adjacency matrix
+Find the adjacency matrix for the following graph:
+#+begin_src latex :exports results
+  \begin{figure}
+      \centering
+      \caption{A graph that is not simple.}
+      \begin{tikzpicture}[scale=1]
+          \GraphInit[vstyle=normal]
+          \Vertex{1}
+          \EA(1){2}
+          \SOEA(2){3}
+          \WE(3){4}
+          \NOWE(2){5}
+          \NOEA(3){6}
+          \NOWE(6){7}
+          \Edges(1,4,2,5,1,2)
+          \Edges(4,5,7,2,4)
+          \Edges(4, 3, 7)
+          \Edge(7)(6)
+      \end{tikzpicture}
+  \end{figure}
+#+end_src
