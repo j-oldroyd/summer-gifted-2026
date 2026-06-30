@@ -216,3 +216,17 @@ An example of an unstable matching is the following:
 #+end_src
 This is because \( A \) prefers \( 2 \) to \( 1 \) and \( 2 \) prefers \( A \)
 to \( B \).  Therefore, both are inclined to switch.
+** Stable Matching Algorithm
+- The previous problem can be solved by an algorithm.  For each round:
+  1. Each employer with an open position makes an offer to the best candidate
+     that they haven't made an offer to yet.
+  2. Each applicant evaluates their offers and tentatively selects the best
+     offer while rejecting the others.
+  3. If there are any open positions remaining, then repeat this process in a
+     new round of offers.
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+This is known as the [[https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm][Gale-Shapley algorithm]].  It had previously been used to
+match residents with hospitals.
