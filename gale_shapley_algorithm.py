@@ -1,3 +1,5 @@
+# Adapted from Gale-Shapley example here:
+# https://stackoverflow.com/questions/75877980/how-to-implement-gale-shapely-algorithm-in-python
 import numpy as np
 
 employer_prefs = {
