@@ -302,17 +302,40 @@ Represent the pictured maze as a tree.  How can you solve the maze using the tre
   \end{figure}
 #+end_src
 ** Breadth-First Search
-- Solving the maze corresponds to finding the shortest path between \( S \) and
-  \( F \).
+- Solving the maze corresponds to finding the shortest path between \( S \) (the
+  *root*) and \( F \) (the *target*) in the tree.
 - Such paths can be found using *breadth-first search*:
-  1. Pick a starting point (the *root*) as the current vertex.
-  2. Label the current vertex as /explored/ and add it to the queue.
-  3. Set the current vertex equal to the first vertex in the queue, removing it
+  1. Add the root to the queue.  While the queue is nonempty, do the following:
+  2. Set the current vertex equal to the first vertex in the queue, removing it
      from the queue.
-  4. If the current vertex is the target, then set the current vertex as the
-     parent of the target and end the algorithm.
-  5. If the current vertex is not the target, then do the following for each neighbor:
-     a. label the neighbor as explored.
-     b. set the parent of the neighbor to the current vertex.
-     c. add the neighbor to the queue.
-  6. If the queue is nonempty, repeat from step 3.
+  3. If the current vertex is the target, then set the current vertex as the
+     parent of the target and erase the queue.
+  4. If the current vertex is not the target, then do the following for each neighbor:
+     a. set the parent of the neighbor to the current vertex.
+     b. add the neighbor to the queue.
+** Breadth-First Application
+*** Solving a maze graph
+Apply the previous algorithm to find the shortest path from \( S \) to \( F \)
+in the following maze graph:
+#+begin_src latex :exports results
+  \begin{figure}
+      \centering
+      \includegraphics[scale=0.45]{maze_nx}
+      \caption{Maze graph.}
+      \label{fig:maze-graph-bfs}
+  \end{figure}
+#+end_src
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+BFS algorithm:
+1. Add the root to the queue.  While the queue is nonempty, do the following:
+2. Set the current vertex equal to the first vertex in the queue, removing it
+   from the queue.
+3. If the current vertex is the target, then set the current vertex as the
+   parent of the target and erase the queue.
+4. If the current vertex is not the target, then do the following for each
+   neighbor:
+   a. set the parent of the neighbor to the current vertex.
+   b. add the neighbor to the queue.
