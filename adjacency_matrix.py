@@ -1,6 +1,6 @@
 import numpy as np
-import networkx as nx
-import matplotlib.pyplot as plt
+#import networkx as nx
+#import matplotlib.pyplot as plt
 
 A = np.array(
     [
@@ -14,9 +14,9 @@ A = np.array(
     ]
 )
 
-G = nx.from_numpy_array(A)
+#G = nx.from_numpy_array(A)
 
-nx.display(G)
+#nx.display(G)
 
-plt.show()
-plt.clf()
+#plt.show()
+#plt.clf()
