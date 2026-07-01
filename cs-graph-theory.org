@@ -190,3 +190,10 @@ BFS algorithm:
 :END:
 Implement the breadth-first search algorithm to solve the maze in the file
 ~maze.py~.
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+After initializing ~queue~ and ~parents~, use a while loop with ~while queue:~.
+This will run as long as the queue is not empty.  To remove the first entry from
+~queue~, use ~.pop(0)~.  To add to the ~queue~, use ~.append()~.

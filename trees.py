@@ -24,6 +24,7 @@ target = "F"
 
 queue = [root]
 parents = {}
+
 while queue:
     current_vertex = queue.pop(0)
     if current_vertex == target:
