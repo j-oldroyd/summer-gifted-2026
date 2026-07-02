@@ -16,6 +16,7 @@
 #+latex_header: \mode<beamer>{\usetheme{moloch}}
 #+LATEX_HEADER: \molochset{block=fill}
 #+LATEX_HEADER: \setbeameroption{show notes on second screen}
+#+LATEX_HEADER: \usepackage{qrcode}
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \usepackage{logicpuzzle}
 #+LATEX_HEADER: \usepackage{tikz}
@@ -197,3 +198,12 @@ Implement the breadth-first search algorithm to solve the maze in the file
 After initializing ~queue~ and ~parents~, use a while loop with ~while queue:~.
 This will run as long as the queue is not empty.  To remove the first entry from
 ~queue~, use ~.pop(0)~.  To add to the ~queue~, use ~.append()~.
+** GitHub Repo
+#+begin_src latex
+  \begin{figure}
+      \centering
+      \qrcode[height=2in]{https://github.com/j-oldroyd/summer-gifted-2026}
+      \caption{GitHub repository for notes.}
+      \label{fig:github-repo}
+  \end{figure}
+#+end_src

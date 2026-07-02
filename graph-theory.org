@@ -16,6 +16,7 @@
 #+latex_header: \mode<beamer>{\usetheme{moloch}}
 #+LATEX_HEADER: \molochset{block=fill}
 #+LATEX_HEADER: \setbeameroption{show notes on second screen}
+#+LATEX_HEADER: \usepackage{qrcode}
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \usepackage{logicpuzzle}
 #+LATEX_HEADER: \usepackage{maze}
@@ -396,3 +397,12 @@ BFS algorithm:
    neighbor:
    a. set the parent of the neighbor to the current vertex.
    b. add the neighbor to the queue.
+** GitHub Repo
+#+begin_src latex
+  \begin{figure}
+      \centering
+      \qrcode[height=2in]{https://github.com/j-oldroyd/summer-gifted-2026}
+      \caption{GitHub repository for notes.}
+      \label{fig:github-repo}
+  \end{figure}
+#+end_src
