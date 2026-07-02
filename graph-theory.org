@@ -22,6 +22,7 @@
 #+LATEX_HEADER: \usepackage{tikz}
 #+LATEX_HEADER: \usetikzlibrary{graphs}
 #+LATEX_HEADER: \usepackage{tkz-graph}
+#+LATEX_HEADER: \usepackage{tkz-berge}
 #+LATEX_HEADER: \usepackage{subcaption}
 #+LATEX_HEADER: \lstdefinestyle{pythonstyle}{
 #+LATEX_HEADER:   backgroundcolor=\color{backcolour},
@@ -287,6 +288,62 @@ file directories on a computer can be modeled using trees.
 :BEAMER_env: example
 :END:
 Draw several trees.  How many edges do they have?  What's the pattern?
+** Huffman Code
+- Trees are often useful as /data structures/.  A *Huffman code* uses a tree to
+  determine an optimal way to store characters in binary:
+  #+begin_src latex
+    \begin{center}
+        \begin{tikzpicture}[scale=.35]
+            \GraphInit[vstyle=Classic]
+            \tikzset{VertexStyle/.style = {shape = circle,fill = black,minimum size = 2pt,inner sep=2pt}}
+            % \SetVertexNormal
+            \SetGraphUnit{3}
+            \SetVertexNoLabel
+            \Vertex{O}
+            \SOWE(O){O1}
+            \Vertex[x = 6, y = -6]{O0}
+            \SOWE(O0){O01}
+            \SOWE(O01){O011}
+            \SOWE(O011){O0111}
+            \SetVertexLabel
+            \SOWE(O1){S}
+            \SOEA(O1){A}
+            \SOEA(O0){E}
+            \SOEA(O01){N}
+            \SOEA(O011){P}
+            \SOEA(O0111){L}
+            \SOWE(O0111){D}
+            \Edges[label={$1$}](O,O1,S)
+            \Edges[label={$1$}](O0,O01,O011,O0111,D)
+            \Edges[label={$0$}](O,O0,E)
+            \Edges[label={$0$}](O1,A)
+            \Edges[label={$0$}](O01,N)
+            \Edges[label={$0$}](O011,P)
+            \Edges[label={$0$}](O0111,L)
+        \end{tikzpicture}
+    \end{center}
+  #+end_src
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+Huffman codes are constructed using probabilities/frequencies.  This particular
+Huffman code would've been constructed from a set of words where "S" was more
+common than "L", for instance.
+** Using Huffman Codes
+*** Encoding and decoding words                                 :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+For the previous Huffman code:
+1. Encode the words "SAD" and "SPEND".
+2. Decode the string "0110011101001011".
+** Constructing Huffman Codes
+*** Code construction                                           :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Construct a Huffman code from the phrase "THIS IS SUPER".
 ** Mazes and Trees
 *** Representing a maze as a tree                               :B_example:
 :PROPERTIES:
