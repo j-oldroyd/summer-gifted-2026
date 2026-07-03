@@ -1,5 +1,5 @@
 #+TITLE: CompSci Graph Theory Notes
-#+AUTHOR: Jesse Oldroyd
+#+AUTHOR: Firstname Oldroyd
 #+EMAIL: oldroyd.j@wvwc.edu
 #+DESCRIPTION: Graph theory notes for WVWC 2026 summer gifted notes.
 #+KEYWORDS: graph theory
@@ -16,6 +16,7 @@
 #+latex_header: \mode<beamer>{\usetheme{moloch}}
 #+LATEX_HEADER: \molochset{block=fill}
 #+LATEX_HEADER: \setbeameroption{show notes on second screen}
+#+LATEX_HEADER: \usepackage{qrcode}
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \usepackage{logicpuzzle}
 #+LATEX_HEADER: \usepackage{tikz}
@@ -163,3 +164,46 @@ matching problem for the following set of preferences:
 |         1 | B, A, C           | A        | 3, 1, 2            |
 |         2 | B, C, A           | B        | 2, 3, 1            |
 |         3 | A, B, C           | C        | 1, 3, 2            |
+** Dictionaries
+- We can also use *dictionaries* in Python to build graphs with NetworkX.
+- Dictionaries in python associate a *key* with a *value*:
+
+  src_python[:exports code]{{key1: value1, key2: value2, ...}}.
+*** Utility graph from dictionary                               :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Use a dictionary to create the utility graph.
+** BFS in Python
+BFS algorithm:
+1. Add the root to the queue.  While the queue is nonempty, do the following:
+2. Set the current vertex equal to the first vertex in the queue, removing it
+   from the queue.
+3. If the current vertex is the target, then set the current vertex as the
+   parent of the target and erase the queue.
+4. If the current vertex is not the target, then do the following for each
+   neighbor:
+   a. set the parent of the neighbor to the current vertex.
+   b. add the neighbor to the queue.
+*** Solving a maze                                              :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Implement the breadth-first search algorithm to solve the maze in the file
+~maze.py~.
+**** Note                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+After initializing ~queue~ and ~parents~, use a while loop with ~while queue:~.
+This will run as long as the queue is not empty.  To remove the first entry from
+~queue~, use ~.pop(0)~.  To add to the ~queue~, use ~.append()~.
+** GitHub Repo
+#+begin_src latex
+  \begin{figure}
+      \centering
+      \qrcode[height=2in]{https://github.com/j-oldroyd/summer-gifted-2026}
+      \caption{GitHub repository for notes.}
+      \label{fig:github-repo}
+  \end{figure}
+#+end_src

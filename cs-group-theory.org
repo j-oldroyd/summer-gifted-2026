@@ -1,5 +1,5 @@
 #+TITLE: CS Notes (Groups)
-#+AUTHOR: Jesse Oldroyd
+#+AUTHOR: Firstname Oldroyd
 #+EMAIL: oldroyd.j@wvwc.edu
 #+DESCRIPTION: CS notes for 2026 Summer Gifted class.
 #+KEYWORDS: group theory, Rubik's cube
