@@ -1,5 +1,5 @@
 #+TITLE: Group Theory Notes
-#+AUTHOR: Jesse Oldroyd
+#+AUTHOR: Firstname Oldroyd
 #+EMAIL: oldroyd.j@wvwc.edu
 #+DESCRIPTION: Group theory notes for WVWC 2026 summer gifted notes, based on Visual Group Theory.
 #+KEYWORDS: group theory

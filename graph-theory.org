@@ -1,5 +1,5 @@
 #+TITLE: Graph Theory Notes
-#+AUTHOR: Jesse Oldroyd
+#+AUTHOR: Firstname Oldroyd
 #+EMAIL: oldroyd.j@wvwc.edu
 #+DESCRIPTION: Graph theory notes for WVWC 2026 summer gifted notes.
 #+KEYWORDS: graph theory
